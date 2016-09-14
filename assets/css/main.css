@@ -1068,7 +1068,7 @@
 
 /* Basic */
 
-	body, input, textarea, select {
+	header, body, input, textarea, select {
 		font-family: Microsoft JhengHei;
 		line-height: 1.85em;
 		color: #888;
