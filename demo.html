@@ -1,0 +1,730 @@
+<html>
+<link rel="stylesheet" href="w3-css.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+.bgimg
+{
+	background-image: url("作品集.png");
+    min-height: 50%;
+	
+}
+
+.cblock {
+    border: 1px solid teal;
+	border-radius: 5px;
+	margin: 10px;
+    background-color: lightgrey;
+}
+
+a.anchor {
+	//overflow:scroll;
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+}
+
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+
+
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+  
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+	ul.topnav.responsive {position: relative;}
+	ul.topnav.responsive li.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.topnav.responsive li {
+		float: none;
+		display: inline;
+	}
+	ul.topnav.responsive li a {
+		display: block;
+		text-align: left;
+	}
+}
+	.parleft{width:64%;position:relative;float:left; margin-right: 64px;}
+	.parright{width:auto;height:auto;position:relative;vertical-align:middle;float:left;}
+
+	@media only screen and (max-width: 1024px) {
+	.parleft{width:auto;position:relative;float:left;}
+	.parright{width:auto;height:auto;position:relative;vertical-align:middle;float:left;}
+
+}
+</style>
+
+
+<head><meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+
+<title>DADA-作品集</title>
+</head>
+
+<body>
+<nav class="w3-sidenav w3-animate-left w3-white  w3-dark-grey w3-card-2" style="display:none; font-family:Microsoft JhengHei" id="mySidenav">
+  <a href="javascript:void(0)"
+  onclick="w3_close()"
+  class="w3-closenav w3-large">Close &times;</a>
+	<a href="./index.html" onclick="w3_close()" class="w3-large w3-light-grey"><b>履歷表</b></a>
+
+
+	<a href="#race" onclick="w3_close()" class="w3-large w3-teal"><b>比賽作品</b></a>
+	<a href="#race-1" onclick="w3_close()">LINGLING 多功能鬧鈴</a>
+	<a href="#race-2" onclick="w3_close()">Good 棒</a>
+
+	<a href="#work" onclick="w3_close()" class="w3-large w3-teal"><b>工作作品</b></a>
+	<a href="#work-1" onclick="w3_close()">版本期限監控程式</a>
+	<a href="#work-2" onclick="w3_close()">機台資訊管理程式</a>
+	<a href="#work-3" onclick="w3_close()">程式狀態監控程式</a>
+
+	<a href="#paper" class="w3-large w3-teal"><b>碩士論文</b></a>
+	<a href="#paper-1" onclick="w3_close()">市區監控影像車流量估計</a>
+
+	<a href="#school" onclick="w3_close()" class="w3-large w3-teal"><b>修課作品</b></a>
+	<a href="#school-1" onclick="w3_close()">UML Editor</a>
+	<a href="#school-2" onclick="w3_close()">類神經網路</a>
+	<a href="#school-3" onclick="w3_close()">自走車模擬</a>
+	<a href="#school-4" onclick="w3_close()">影像處理演算法</a>
+	<a href="#school-5" onclick="w3_close()">網路爬蟲</a>
+	<a href="#school-6" onclick="w3_close()">人臉辨識-2DLDA</a>
+
+</nav>
+
+<div>
+<div style="position: fixed; z-index: 99;top: 0;width:100%;font-family:Microsoft JhengHei;">
+<ul class="topnav w3-teal w3-large w3-center">
+<li class="w3-opennav w3-xlarge" onclick="w3_open()"><a>&#9776;</a></li>
+<li class="w3-dropdown-hover">
+	<a href="#race" class="w3-hover-light-grey">比賽作品</a>
+</li>
+<li class="w3-dropdown-hover">
+	<a href="#work" class="w3-hover-light-grey">工作作品</a>
+</li>
+<li class="w3-dropdown-hover">
+	<a href="#paper" class="w3-hover-light-grey">碩士論文</a>
+</li>
+<li class="w3-dropdown-hover">
+	<a href="#school" class="w3-hover-light-grey">修課作品</a>
+</li>
+<li class="w3-xlarge "><a href="./index.html">履歷表</a></li>
+</ul>
+</div>
+
+<div class="topnav w3-right-align w3-display-topright w3-text-black w3-padding-16" style="position:fixed;z-index: 99;top:3">
+
+<span class="w3-btn w3-xlarge w3-round-xxlarge w3-red" style="display:block" id="filter_btn_origin" onclick="showFilterBtn()">filter</span>
+<span id="filter" class="w3-animate-right w3-teal " style="display:none;">
+<input class="w3-check" type="checkbox" onclick="clickALL(this);" id="chkall">ALL</input>
+<input class="w3-check" type="checkbox" onclick="handleClick(this,'c++');" id="chk7">C++</input>
+<input class="w3-check" type="checkbox" onclick="handleClick(this, 'csharp');" id="chk1">C#</input>
+<input class="w3-check" type="checkbox" onclick="handleClick(this, 'python');" id="chk2">Python</input>
+<input class="w3-check" type="checkbox" onclick="handleClick(this, 'android');" id="chk3">Android</input>
+<input class="w3-check " type="checkbox" onclick="handleClick(this, 'java');" id="chk4">Java</input>
+<input class="w3-check" type="checkbox" onclick="handleClick(this, 'matlab');" id="chk5">Matlab</input>
+<input class="w3-check" type="checkbox" onclick="handleClick(this, 'opencv');" id="chk6">OpenCV</input>
+</span>
+<a class="w3-btn-floating w3-red" onclick="myfilter()" id="filter_btn_after" style="vertical-align: middle;display:none;">+</a>
+</div>
+</div>
+<p id="chktest"  style="margin-top:50px"></p>
+
+<a class="anchor" id="race"></a>
+<div class="w3-container w3-dark-grey" >
+<a class="content_tag" style="display:none">#android#python</a>
+  <h3>比賽作品</h3>
+</div>
+
+<!--LINGLING-->
+<a class="anchor" id="race-1"></a>
+<div class="w3-container w3-padding-32 w3-light-grey cblock"> 
+  <a class="content_tag" style="display:none">#android</a>
+	<div>
+	   	<h3 class="w3-text-teal" >LINGLING 多功能鬧鈴<span class="w3-btn w3-xlarge w3-round-xxlarge w3-red" style="margin-left:16px;align:center;" id="filter_btn_origin" onclick="document.getElementById('modal-r1').style.display='block';"><i class="fa fa-expand"></i></span></h3>
+	    <ul style="display:block">
+	    	<li class="w3-container"><b>比賽名稱 :</b> <p>2012中華電信創新應用大賽行動應用組 第三名</p></li>
+			<li class="w3-container"><b>實作技術 :</b>	<p>Android、Google API、Facebook API</p></li>
+			<li class="w3-container"><b>專案概述 :</b> <p>此專案結合Google API及Facebook API之功能，實作多種鬧鐘功能 : 一般鬧鈴配合遊戲解鎖、GPS鬧鈴、群組鬧鈴、假來電鬧鈴、情人鬧鈴</p></li>
+	    	<li class="w3-container"><b>專案分工 :</b> <p>3人一組 : 2人設計程式、1人設計美工，此專案我負責一般鬧鈴之遊戲、假來電鬧鈴、情人鬧鈴</p></li>
+		</ul>
+    </div>
+
+		<img class="slide-r1" src="./pic/r1/1.png"  style="max-width:320px;max-height:320px;display:none;" alt="程式主畫面">
+		<img class="slide-r1" src="./pic/r1/2.png"  style="max-width:320px;max-height:320px;display:none;" alt="一般鬧鈴設定">
+		<img class="slide-r1" src="./pic/r1/3.png"  style="max-width:320px;max-height:320px;display:none;" alt="一般鬧鈴解鎖遊戲">
+		<img class="slide-r1" src="./pic/r1/4.png"  style="max-width:320px;max-height:320px;display:none;" alt="GPS鬧鈴畫面">
+		<img class="slide-r1" src="./pic/r1/5.png"  style="max-width:320px;max-height:320px;display:none;" alt="假來電鬧鈴畫面">
+		<img class="slide-r1" src="./pic/r1/6.png"  style="max-width:320px;max-height:320px;display:none;" alt="群組鬧鈴設定">
+		<img class="slide-r1" src="./pic/r1/7.png"  style="max-width:320px;max-height:320px;display:none;" alt="群組鬧鈴設定">
+		<img class="slide-r1" src="./pic/r1/8.png"  style="max-width:320px;max-height:320px;display:none;" alt="天氣資訊">
+		<img class="slide-r1" src="./pic/r1/9.png"  style="max-width:320px;max-height:320px;display:none;" alt="程式架構">
+
+</div>
+
+
+<!--Good 棒-->
+<a class="anchor" id="race-2"></a>
+<div class="w3-container w3-padding-32 w3-light-grey cblock"> 
+  <a class="content_tag" style="display:none">#android#python</a>
+	<div>
+	   	<h3 class="w3-text-teal" >Good 棒<span class="w3-btn w3-xlarge w3-round-xxlarge w3-red" style="margin-left:16px;align:center;" id="filter_btn_origin" onclick="document.getElementById('modal-r2').style.display='block';"><i class="fa fa-expand"></i></span><span class="w3-btn w3-large w3-round-xxlarge w3-purple" style="margin-left:16px;align:center;" id="filter_btn_origin" onclick="document.getElementById('modal-video-r1').style.display='block';document.getElementById('r2-video').play();">video</span></h3>
+	    <ul style="display:block">
+	    	<li class="w3-container"><b>比賽名稱 :</b> <p>2015全國微電腦應用系統設計製作競賽 第三名</p></li>
+			<li class="w3-container"><b>實作技術 :</b> <p>Android、Arduino、JNI、Python</p></li>
+			<li class="w3-container"><b>專案概述 :</b> <p>此專案為手機結合Arduino利用藍芽連線溝通之應用。我們希望做出一組能自己辨識鼓手姿態的鼓棒，並經過藍芽與手機溝通，實作許多應用。</p></li>
+	    	<li class="w3-container"><b>專案分工 :</b> <p>4人一組 : 分為四部分 1.手機端 2.MCU端 3.演算法調教 4.產品包裝，我負責統籌專案與手機端實作</p></li>
+		</ul>
+    </div>
+
+		<img class="slide-r2" src="./pic/r2/1.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="作品模組，可套在任意鼓棒上使用">
+		<img class="slide-r2" src="./pic/r2/2.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="使用示意圖，隨著不同方向敲擊，會反應對應鼓之鼓聲">
+		<img class="slide-r2" src="./pic/r2/3.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="鼓棒與手機透過藍芽連線配對即可開始使用">
+		<img class="slide-r2" src="./pic/r2/4.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="手機進入畫面，可以觀察鼓棒訊號與使用演奏模式">
+		<img class="slide-r2" src="./pic/r2/5.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="本專案根據鼓棒的六項資訊，轉化並判斷鼓手敲擊的時機點與方向">
+		<img class="slide-r2" src="./pic/r2/6.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="演奏模式，設定五個不同方向的鼓供鼓手使用">
+		<img class="slide-r2" src="./pic/r2/7.jpg"  style="max-width:320px;max-height:320px;display:none;"  alt="系統架構，兩支鼓棒之間透過NRF24L01射頻通訊，Server端鼓棒再透過HC-05藍芽與手機連線">
+</div>
+
+
+
+<a class="anchor" id="work"></a>
+<div class="w3-container w3-dark-grey" id="work">
+<a class="content_tag" style="display:none">#c++#csharp</a>
+  <h3>工作作品</i></h3>
+</div>
+
+
+<a class="anchor" id="work-1"></a>
+<div class="w3-container w3-padding-32 w3-light-grey cblock"> 
+  <a class="content_tag" style="display:none">#c++#csharp</a>
+	<div >
+	   	<h3 class="w3-text-teal" >版本期限監控程式(For Win XP)</h3>
+	    <ul style="display:block">
+	    	<li class="w3-container"><b>專案需求 :</b> <p>為VB、C++程式，製作附加功能，監控產品的有效期限</p></li>
+			<li class="w3-container"><b>實作技術 :</b> 
+				<p><b class="w3-text-purple">C++ : </b>製作dll將log資訊埋藏在特定路徑與Windows的log檔中<br>
+				<b class="w3-text-purple">C # : </b>製作設定有效日期以及加密介面<br></p>
+			</li>
+		</ul>
+    </div>
+</div>
+
+
+<a class="anchor" id="work-2"></a>
+<div class="w3-container w3-padding-32 w3-light-grey cblock"> 
+  <a class="content_tag" style="display:none">#csharp</a>
+	<div >
+	   	<h3 class="w3-text-teal" >機具狀態資訊管理程式(For Win XP~Win 10)</h3>
+	    <ul style="display:block">
+	    	<li class="w3-container"><b>專案需求 :</b> <p>機台每天會產生數萬筆資料，提供能夠整理機台產出資料的程式介面</p></li>
+			<li class="w3-container"><b>實作技術 :</b> 
+				<p><b class="w3-text-purple">C# : </b>製作程式介面及功能<br>
+				</p>
+			</li>
+		</ul>
+    </div>
+</div>
+
+
+<a class="anchor" id="work-3"></a>
+<div class="w3-container w3-padding-32 w3-light-grey cblock"> 
+  <a class="content_tag" style="display:none">#c++#csharp</a>
+	<div >
+	   	<h3 class="w3-text-teal" >程式狀態監控程式(For Win XP~Win 10)</h3>
+	    <ul style="display:block">
+	    	<li class="w3-container"><b>專案需求 :</b> <p>提供一通用程式，能即時接收被監控之程式發出之訊息，並能夠整理及控制被監控之程式</p></li>
+			<li class="w3-container"><b>實作技術 :</b> 
+				<p><b class="w3-text-purple">C++ : </b>使用thread，產生即時訊息<br>
+				<b class="w3-text-purple">C # : </b>製作程式介面及功能<br></p>
+			</li>
+		</ul>
+    </div>
+</div>
+
+
+<a class="anchor" id="paper"></a>
+<div class="w3-container w3-dark-grey">
+<a class="content_tag" style="display:none">#c++#opencv#csharp#matlab</a>
+  <h3>碩士論文</h3>
+</div>
+
+
+<a class="anchor" id="paper-1"></a>
+<div class="w3-container w3-padding-32 w3-light-grey cblock"> 
+  	<a class="content_tag" style="display:none">#c++#opencv#csharp#matlab</a>
+	<div>
+	   	<h3 class="w3-text-teal" >市區監控影像車流量估計<span class="w3-btn w3-xlarge w3-round-xxlarge w3-red" style="margin-left:16px;align:center;" id="filter_btn_origin" onclick="document.getElementById('modal-paper').style.display='block';"><i class="fa fa-expand"></i></span></h3>
+	    <ul style="display:block">
+	    	<li class="w3-container"><b>專案需求 :</b> <p>使用影像處理演算法擷取場景中之車輛，並計算每個瞬間的車輛數，但因為會有偵測的誤差，最後使用一機率模型來估測場景中之車輛數。</p></li>
+			<li class="w3-container"><b>實作技術 :</b> 
+				<p><b class="w3-text-purple">C++ : </b>實作演算法<br>
+				<b class="w3-text-purple">C # : </b>擷取資料及標記資料之介面<br>
+				<b class="w3-text-purple">OpenCV : </b>使用OpenCV提供之API(ex. GMM、HoughLine、Morphology...)<br>
+				<b class="w3-text-purple">Matlab : </b>訓練回歸模型、批量分析整理資料<br></p>
+			</li>
+		</ul>
+    </div>
+
+		<img class="slide-paper" src="./pic/paper/1.png"  style="max-width:320px;max-height:320px;display:none;" alt="利用演算法取得車輛前景">
+		<img class="slide-paper" src="./pic/paper/2.png"  style="max-width:320px;max-height:320px;display:none;" alt="利用演算法取得道路輪廓">
+		<img class="slide-paper" src="./pic/paper/4.png"  style="max-width:320px;max-height:320px;display:none;" alt="利用演算法取得偵測區域">
+		<img class="slide-paper" src="./pic/paper/3.png"  style="max-width:320px;max-height:320px;display:none;" alt="道路區域示意圖">
+		<img class="slide-paper" src="./pic/paper/5.png"  style="max-width:320px;max-height:320px;display:none;" alt="車輛數資訊">
+		<img class="slide-paper" src="./pic/paper/6.png"  style="max-width:320px;max-height:320px;display:none;" alt="機率模型">
+</div>
+
+
+<a class="anchor" id="school"></a>
+<div class="w3-container w3-dark-grey">
+  <h3>修課作品</h3>
+  <a class="content_tag" style="display:none">#java#c++#opencv#csharp#python#matlab</a>
+</div>
+
+
+<!--OOP-->
+<a class="anchor" id="school-1"></a>
+<div class="w3-container w3-padding-32 w3-light-grey cblock">
+	<a class="content_tag" style="display:none">#java</a>
+	<div>
+		<h3 class="w3-text-teal">物件導向課程 - UML Editor<span class="w3-btn w3-xlarge w3-round-xxlarge w3-red" style="margin-left:16px;align:center;" id="filter_btn_origin" onclick="document.getElementById('modal-oop').style.display='block';"><i class="fa fa-expand"></i></span></h3>
+		<ul style="display:block">
+			<li class="w3-container"><b>專案概述 : </b><p>利用物件導向的概念，實作一個UML編輯器</p></li>
+			<li class="w3-container"><b>實作技術 : <p class="w3-text-purple">Java、OOP、 Design Pattern、UML</p></b></li>
+		</ul>
+	</div>
+
+		<img class="slide-oop" src="./pic/oop/1.png"  style="max-width:320px;max-height:320px;display:none;" alt="介面開始畫面">
+		<img class="slide-oop" src="./pic/oop/2.png"  style="max-width:320px;max-height:320px;display:none;" alt="編輯畫面">
+		<img class="slide-oop" src="./pic/oop/3.png"  style="max-width:320px;max-height:320px;display:none;" alt="介面功能">
+
+</div>
+
+<!--類神經網路-->
+<a class="anchor" id="school-2"></a>
+<div class="w3-container w3-padding-32 w3-light-grey cblock"> 
+  <a class="content_tag" style="display:none">#csharp</a> 
+	<div>
+	   	<h3 class="w3-text-teal">類神經網路課程 - 演算法實作<span class="w3-btn w3-xlarge w3-round-xxlarge w3-red" style="margin-left:16px;align:center;" id="filter_btn_origin" onclick="document.getElementById('modal-nn').style.display='block';"><i class="fa fa-expand"></i></span></h3>
+	    <ul style="display:block">
+			<li class="w3-container"><b>專案概述 : </b>
+				<p>設計介面，分析輸入資料，實現感知機(Perseptron)、放射狀基底函數網路(Radial basis function network)及自我組織對映(Self-organizing map)等類神經網路演算法。</p></li>
+			<li class="w3-container"><b >實作技術 :
+				<p class="w3-text-purple">C#、Perseptron、RBFN、SOM</p></b></li>
+		</ul>
+    </div>
+
+		<img class="slide-nn" src="./pic/nn/p1.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="感知機(Perseptron)">
+		<img class="slide-nn" src="./pic/nn/p2.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="感知機(Perseptron)">
+		<img class="slide-nn" src="./pic/nn/p3.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="感知機(Perseptron)">
+		<img class="slide-nn" src="./pic/nn/p4.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="感知機(Perseptron)">
+		<img class="slide-nn" src="./pic/nn/r1.png"  style="max-width:320px;max-height:320px;display:none;" alt="放射狀基底函數網路(Radial basis function network)">
+		<img class="slide-nn" src="./pic/nn/r2.png"  style="max-width:320px;max-height:320px;display:none;" alt="放射狀基底函數網路(Radial basis function network)">
+		<img class="slide-nn" src="./pic/nn/r3.png"  style="max-width:320px;max-height:320px;display:none;" alt="放射狀基底函數網路(Radial basis function network)">
+		<img class="slide-nn" src="./pic/nn/r4.png"  style="max-width:320px;max-height:320px;display:none;" alt="放射狀基底函數網路(Radial basis function network)">
+		<img class="slide-nn" src="./pic/nn/s1.png"  style="max-width:320px;max-height:320px;display:none;" alt="自我組織對映(Self-organizing map)">
+		<img class="slide-nn" src="./pic/nn/s2.png"  style="max-width:320px;max-height:320px;display:none;" alt="自我組織對映(Self-organizing map)">
+		<img class="slide-nn" src="./pic/nn/s3.png"  style="max-width:320px;max-height:320px;display:none;" alt="自我組織對映(Self-organizing map)">
+		<img class="slide-nn" src="./pic/nn/s4.png"  style="max-width:320px;max-height:320px;display:none;" alt="自我組織對映(Self-organizing map)">	
+
+</div>
+
+<!--計算型智慧-->
+<a class="anchor" id="school-3"></a>
+<div class="w3-container w3-padding-32 w3-light-grey cblock">
+	<a class="content_tag" style="display:none">#csharp</a>
+  	<div>
+	   	<h3 class="w3-text-teal">計算型智慧 - 自走車模擬<span class="w3-btn w3-xlarge w3-round-xxlarge w3-red" style="margin-left:16px;align:center;" id="filter_btn_origin" onclick="document.getElementById('modal-ci').style.display='block';"><i class="fa fa-expand"></i></span></h3>
+	    <ul style="display:block">
+			<li class="w3-container"><b>專案概述 : </b>
+				<P >模擬自走車行駛於特定場景。並利用三種不同的人工智慧演算法(分別為Fuzzy System、Genetic Algorithm、Particle Swarm Optimization)，訓練車輛行駛的判斷模型。</P></li>
+			<li class="w3-container"><b>實作技術 : 
+				<P class="w3-text-purple">C#、Fuzzy System(模糊系統)、GA(基因演算法)、PSO(粒子群優化)</P></b></li>
+		</ul>
+	</div>
+
+		<img class="slide-ci" src="./pic/ci/f1.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="Fuzzy模擬介面">
+		<img class="slide-ci" src="./pic/ci/f2.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="Fuzzy模擬介面，根據左、中、右三個Sensor計算距離，判斷移動方向">
+		<img class="slide-ci" src="./pic/ci/f3.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="Fuzzy規則">
+		<img class="slide-ci" src="./pic/ci/f4.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="Fuzzy規則">
+		<img class="slide-ci" src="./pic/ci/g1.png"  style="max-width:320px;max-height:320px;display:none;" alt="GA模擬介面">
+		<img class="slide-ci" src="./pic/ci/g2.png"  style="max-width:320px;max-height:320px;display:none;" alt="GA模擬介面，根據訓練資料訓練出一條誤差最小的路徑">
+		<img class="slide-ci" src="./pic/ci/g3.png"  style="max-width:320px;max-height:320px;display:none;" alt="GA模擬介面，根據訓練資料訓練出一條誤差最小的路徑(白色為訓練資料，紅色為實際路徑)">
+		<img class="slide-ci" src="./pic/ci/p1.png"  style="max-width:320px;max-height:320px;display:none;" alt="PSO模擬介面">
+		<img class="slide-ci" src="./pic/ci/p2.png"  style="max-width:320px;max-height:320px;display:none;" alt="PSO模擬介面，與GA一樣會迭代出一條誤差最小之路徑。">
+</div>
+
+
+<a class="anchor" id="school-4"></a>
+<div class="w3-container w3-padding-32 w3-light-grey cblock">
+	<a class="content_tag" style="display:none">#c++#opencv</a>
+	<div>
+	   	<h3 class="w3-text-teal">智慧型監控課程 - 影像處理 with OpenCV<span class="w3-btn w3-xlarge w3-round-xxlarge w3-red" style="margin-left:16px;align:center;" id="filter_btn_origin" onclick="document.getElementById('modal-is').style.display='block';"><i class="fa fa-expand"></i></span></h3>
+		<ul id="IS_content" style="display:block">
+			<li><b>專案概述 : </b><p>實作以及教學(使用英文)OPENCV演算法</p></li>
+			<li><b>實作技術 : <p class="w3-text-purple">C++、OPENCV</p></b></li>
+		</ul>
+	</div>
+
+		<img class="slide-is" src="./pic/is/1.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="影像Channel轉換與調整">
+		<img class="slide-is" src="./pic/is/2.png"  style="max-width:320px;max-height:320px;display:none;" alt="前景偵測(Mixture of Gaussian)">
+		<img class="slide-is" src="./pic/is/3.png"  style="max-width:320px;max-height:320px;display:none;" alt="膚色偵測">
+		<img class="slide-is" src="./pic/is/4.jpg"  style="max-width:320px;max-height:320px;display:none;" alt="人臉偵測">
+		<img class="slide-is" src="./pic/is/5.png"  style="max-width:320px;max-height:320px;display:none;" alt="影像合成">
+		<img class="slide-is" src="./pic/is/6.png"  style="max-width:320px;max-height:320px;display:none;" alt="走路姿態偵測">
+</div>
+
+
+<a class="anchor" id="school-5"></a>
+<div class="w3-container w3-padding-32 w3-light-grey cblock">
+	<a class="content_tag" style="display:none">#python</a>
+	<div>
+	   	<h3 class="w3-text-teal">高速運算課程 - 網路爬蟲分析<span class="w3-btn w3-xlarge w3-round-xxlarge w3-red" style="margin-left:16px;align:center;" id="filter_btn_origin" onclick="document.getElementById('modal-hs').style.display='block';"><i class="fa fa-expand"></i></span></h3>
+		<ul id="IS_content" style="display:block">
+			<li><b>專案概述 :</b><p>蒐集新聞網站的資料，分析重要資訊</p></li>
+			<li><b>實作技術 : <p class="w3-text-purple">Python、MongoDB、OpenCL</p></b></li>
+		</ul>
+	</div>
+
+		<img class="slide-hs" src="./pic/hs/1.png"  style="max-width:320px;max-height:320px;display:none;" alt="網頁分析">
+		<img class="slide-hs" src="./pic/hs/2.png"  style="max-width:320px;max-height:320px;display:none;" alt="資料結構">
+		<img class="slide-hs" src="./pic/hs/3.png"  style="max-width:320px;max-height:320px;display:none;" alt="資料視覺化">
+</div>
+
+
+<a class="anchor" id="school-6"></a>
+<div class="w3-container w3-padding-32 w3-light-grey cblock">
+	<a class="content_tag" style="display:none">#matlab</a>
+	<div>
+	   	<h3 class="w3-text-teal">機器學習課程 - 人臉辨識 with 2D-LDA<span class="w3-btn w3-xlarge w3-round-xxlarge w3-red" style="margin-left:16px;align:center;" id="filter_btn_origin" onclick="document.getElementById('modal-ml').style.display='block';"><i class="fa fa-expand"></i></span></h3>
+		<ul id="IS_content" style="display:block">
+			<li><b>專案概述 :</b> <p>利用Matlab自己實作2D-LDA演算法，並以班上的同學為Database訓練模型及即時辨識，測試演算法的準確度</p></li>
+			<li><b>實作技術 : <p class="w3-text-purple">MatLab、LDA(Linear Discriminant Analysis)</p></b></li>
+		</ul>
+	</div>
+
+		<img class="slide-ml" src="./pic/ml/1.png"  style="max-width:320px;max-height:320px;display:none;" alt="人臉偵測及人眼偵測">
+		<img class="slide-ml" src="./pic/ml/2.png"  style="max-width:320px;max-height:320px;display:none;" alt="資料對齊">
+		<img class="slide-ml" src="./pic/ml/3.png"  style="max-width:320px;max-height:320px;display:none;" alt="偵測結果與FPS">
+</div>
+
+
+
+<div id="modal-r1" class="w3-modal w3-dark-grey w3-animate-zoom" style="margin-top:50px" >
+ 	<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright w3-dropdown-hover" onclick="this.parentElement.style.display='none'">&times;</span>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;left:0" onclick="plusDivs('slide-r1', -1)">❮</a>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;right:0" onclick="plusDivs('slide-r1',1)">❯</a>
+	<img class="w3-modal-content" style="display:block; max-width:70%; max-height:70%; width:auto; height:auto" id="slide-r1_modal_src">
+	<p class="w3-container w3-xlarge w3-transparent w3-center" id="slide-r1_content"></p>
+</div>
+
+
+<div id="modal-video-r1" class="w3-modal w3-dark-grey w3-animate-zoom" style="margin-top:50px" >
+	<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-display-topright w3-dropdown-hover" onclick="this.parentElement.style.display='none';document.getElementById('r2-video').pause();">&times;</span>
+		<p class="w3-center"><video id="r2-video" title="比賽影片" width="80%" height="80%" controls>
+		<source src="race2.mp4" type="video/mp4">
+		our browser does not support the video tag.
+		</video><br>
+		比賽影片</p>
+
+</div>
+
+<div id="modal-r2" class="w3-modal w3-dark-grey w3-animate-zoom" style="margin-top:50px" >
+ 	<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright w3-dropdown-hover" onclick="this.parentElement.style.display='none'">&times;</span>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;left:0" onclick="plusDivs('slide-r2', -1)">❮</a>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;right:0" onclick="plusDivs('slide-r2',1)">❯</a>
+	<img class="w3-modal-content" style="display:block; max-width:70%; max-height:70%; width:auto; height:auto" id="slide-r2_modal_src">
+	<p class="w3-container w3-xlarge w3-transparent w3-center" id="slide-r2_content"></p>
+</div>
+
+<div id="modal-paper" class="w3-modal w3-dark-grey w3-animate-zoom" style="margin-top:50px" >
+ 	<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright w3-dropdown-hover" onclick="this.parentElement.style.display='none'">&times;</span>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;left:0" onclick="plusDivs('slide-paper', -1)">❮</a>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;right:0" onclick="plusDivs('slide-paper',1)">❯</a>
+	<img class="w3-modal-content" style="display:block; max-width:70%; max-height:70%; width:auto; height:auto" id="slide-paper_modal_src">
+	<p class="w3-container w3-xlarge w3-transparent w3-center" id="slide-paper_content"></p>
+</div>
+
+
+<div id="modal-oop" class="w3-modal w3-dark-grey w3-animate-zoom" style="margin-top:50px" >
+ 	<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright w3-dropdown-hover" onclick="this.parentElement.style.display='none'">&times;</span>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;left:0" onclick="plusDivs('slide-oop', -1)">❮</a>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;right:0" onclick="plusDivs('slide-oop',1)">❯</a>
+	<img class="w3-modal-content" style="display:block; max-width:70%; max-height:70%; width:auto; height:auto" id="slide-oop_modal_src">
+	<p class="w3-container w3-xlarge w3-transparent w3-center" id="slide-oop_content"></p>
+</div>
+
+<div id="modal-nn" class="w3-modal w3-dark-grey w3-animate-zoom" style="margin-top:50px" >
+ 	<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright w3-dropdown-hover" onclick="this.parentElement.style.display='none'">&times;</span>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;left:0" onclick="plusDivs('slide-nn', -1)">❮</a>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;right:0" onclick="plusDivs('slide-nn',1)">❯</a>
+	<img class="w3-modal-content" style="display:block; max-width:70%; max-height:70%; width:auto; height:auto" id="slide-nn_modal_src">
+	<p class="w3-container w3-xlarge w3-transparent w3-center" id="slide-nn_content"></p>
+</div>
+
+<div id="modal-ci" class="w3-modal w3-dark-grey w3-animate-zoom" style="margin-top:50px" >
+ 	<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright w3-dropdown-hover" onclick="this.parentElement.style.display='none'">&times;</span>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;left:0" onclick="plusDivs('slide-ci', -1)">❮</a>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;right:0" onclick="plusDivs('slide-ci',1)">❯</a>
+	<img class="w3-modal-content" style="display:block; max-width:70%; max-height:70%; width:auto; height:auto" id="slide-ci_modal_src">
+	<p class="w3-container w3-xlarge w3-transparent w3-center" id="slide-ci_content"></p>
+</div>
+
+<div id="modal-is" class="w3-modal w3-dark-grey w3-animate-zoom" style="margin-top:50px" >
+ 	<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright w3-dropdown-hover" onclick="this.parentElement.style.display='none'">&times;</span>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;left:0" onclick="plusDivs('slide-is', -1)">❮</a>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;right:0" onclick="plusDivs('slide-is',1)">❯</a>
+	<img class="w3-modal-content" style="display:block; max-width:70%; max-height:70%; width:auto; height:auto" id="slide-is_modal_src">
+	<p class="w3-container w3-xlarge w3-transparent w3-center" id="slide-is_content"></p>
+</div>
+
+<div id="modal-hs" class="w3-modal w3-dark-grey w3-animate-zoom" style="margin-top:50px" >
+ 	<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright w3-dropdown-hover" onclick="this.parentElement.style.display='none'">&times;</span>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;left:0" onclick="plusDivs('slide-hs', -1)">❮</a>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;right:0" onclick="plusDivs('slide-hs',1)">❯</a>
+	<img class="w3-modal-content" style="display:block; max-width:70%; max-height:70%; width:auto; height:auto" id="slide-hs_modal_src">
+	<p class="w3-container w3-xlarge w3-transparent w3-center" id="slide-hs_content"></p>
+</div>
+
+<div id="modal-ml" class="w3-modal w3-dark-grey w3-animate-zoom" style="margin-top:50px">
+ 	<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright w3-dropdown-hover" onclick="this.parentElement.style.display='none'">&times;</span>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;left:0" onclick="plusDivs('slide-ml', -1)">❮</a>
+	<a class="w3-btn-floating w3-teal" style="position:absolute;top:45%;right:0" onclick="plusDivs('slide-ml',1)">❯</a>
+	<img class="w3-modal-content" style="display:block; max-width:70%; max-height:70%; width:auto; height:auto" id="slide-ml_modal_src">
+	<p class="w3-container w3-xlarge w3-transparent w3-center" id="slide-ml_content"></p>
+</div>
+
+</body>
+
+
+
+
+
+
+<footer class="w3-center w3-dark-grey w3-padding-32 w3-hover-black">
+  
+  <p style="font-family:Microsoft JhengHei;color:pink;font-size:16px;"><strong><a href="./index.html" style="text-decoration: none">&rarr;履歷表&rarr;</a></strong></p>
+  
+  
+  <p style="font-family:Microsoft JhengHei;padding:0px 16px 0px 16px;color:F5FFFA;">感謝您的耐心瀏覽<br>若是對任何專案有興趣，歡迎與我聯絡<br><b>懇請給予機會與貴公司一起耕耘，邁向目標。</b></p>
+  
+  <p style="font-family:Microsoft JhengHei;color:#0000CD;font-size:16px;"><strong><a href="mailto:chimp4993@gmail.com" style="text-decoration: none">&#9993 Contact Me</a> : chimp4993@gmail.com</strong></p>
+
+  
+  
+</footer>
+</html>
+
+
+<script>
+var slideIndex = {'slide-r1':0,'slide-r2':0,'slide-paper':0,'slide-oop':0,'slide-nn':0,'slide-ci':0,'slide-is':0,'slide-hs':0,'slide-ml':0};
+showDivs("slide-r1", 0);
+showDivs("slide-r2", 0);
+showDivs("slide-paper", 0);
+showDivs("slide-oop", 0);
+showDivs("slide-nn", 0);
+showDivs("slide-ci", 0);
+showDivs("slide-is", 0);
+showDivs("slide-hs", 0);
+showDivs("slide-ml", 0);
+
+var tagString = [];
+Array.prototype.remove = function() {
+    var what, a = arguments, L = a.length, ax;
+    while (L && this.length) {
+        what = a[--L];
+        while ((ax = this.indexOf(what)) !== -1) {
+            this.splice(ax, 1);
+        }
+    }
+    return this;
+};
+
+function plusDivs(classname,n) {
+  showDivs(classname,slideIndex[classname] += n);
+}
+
+function showDivs(classname, n) {
+    var s1 = document.getElementsByClassName(classname);
+	if(slideIndex[classname]<0)slideIndex[classname] = 0;
+	if(slideIndex[classname]>s1.length-1)slideIndex[classname] = s1.length-1;
+	//s1[slideIndex[classname]].style.display = "block";
+	document.getElementById(classname+"_modal_src").src=s1[slideIndex[classname]].src;
+	document.getElementById(classname+"_content").innerHTML=s1[slideIndex[classname]].alt;
+}
+
+function clickALL(cb)
+{
+	for(var i=1;i<8;i++)
+	{
+		if(document.getElementById("chk"+i).checked != cb.checked)
+			document.getElementById("chk"+i).click();
+	}
+
+
+}
+
+function handleClick(cb, content) {
+
+	var divs = document.getElementsByClassName("content_tag");
+	
+	for(var i=0;i<divs.length;i++)
+	{
+		divs[i].parentElement.style.display = 'none';
+	}
+	
+	
+if(cb.checked == true){
+	//document.getElementById("chktest").style.display = "block";
+	tagString.push(content);
+	//document.getElementById("chktest").innerHTML = tagString.join(",");
+
+
+}
+else
+{
+	//document.getElementById("test_content").style.display = "none";
+	tagString.remove(content);
+	//document.getElementById("chktest").innerHTML = tagString.join(',');
+}
+
+	for(var i=0;i<divs.length;i++)
+	{
+		var str = divs[i].innerHTML;
+		str = str.replace(" ", "");
+		//document.getElementById("chktest").innerHTML += str;
+		var tags = str.split("#");
+		for(var j=0;j<tags.length;j++)
+		{
+			if(tagString.indexOf(tags[j]) > -1)
+			{
+				divs[i].parentElement.style.display = 'block';
+				break;
+			}
+			
+		}
+		
+	}
+}
+
+
+function getTags(element)
+{
+	var Tags = new Object();
+	var str = element.innerHTML;
+	str = str.replace(" ", "");
+	Tags = str.split("#");
+	return Tags;
+}
+
+
+function slide() {
+
+    var s1 = document.getElementsByClassName("mySlides");
+	var s2 = document.getElementsByClassName("mySlides1");
+	var s3 = document.getElementsByClassName("mySlides2");
+    for (var i = 0; i < s1.length; i++) {
+       s1[i].style.display = "none";
+    }
+	for (var i = 0; i < s2.length; i++) {
+       s2[i].style.display = "none";
+    }
+	for (var i = 0; i < s3.length; i++) {
+       s3[i].style.display = "none";
+    }
+   
+	if(myIndex > 3600) myIndex = 0;
+    s1[myIndex%s1.length].style.display = "block";
+	s2[myIndex%s2.length].style.display = "block";
+	s3[myIndex%s3.length].style.display = "block";
+    setTimeout(slide, 1000); // Change image every 2 seconds
+	myIndex++;
+}
+
+function w3_open() {
+    //document.getElementById("mySidenav").style.width = "50%";
+    document.getElementById("mySidenav").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+
+function detailShow(tag) {
+	if(document.getElementById(tag.id+"_content").style.display === "block")
+	{
+		document.getElementById(tag.id+"_content").style.display = "none";
+		tag.innerHTML = "(詳細內容...)";
+	}
+	else 
+	{
+		document.getElementById(tag.id+"_content").style.display = "block";
+
+		tag.innerHTML = "(隱藏內容...)";
+	}
+
+}
+
+function showFilterBtn()
+{
+	document.getElementById("filter_btn_origin").style.display = "none";
+	document.getElementById("filter_btn_after").style.display = "inline-block";
+	document.getElementById("filter").style.display = "inline-block";		
+	document.getElementById("filter_btn_after").innerHTML="&minus;";
+}
+
+
+
+function myfilter()
+{
+	
+	if(document.getElementById("filter").style.display === "none")
+	{		
+		document.getElementById("filter").style.display = "inline-block";		
+		document.getElementById("filter_btn_after").innerHTML="&minus;";		
+	}
+	else 
+	{
+		document.getElementById("filter").style.display = "none";	
+		document.getElementById("filter_btn_after").innerHTML='+';
+	}
+	document.getElementById("filter_btn_after").innerHTML.title=tagString.jion(",");		
+}
+</script>
