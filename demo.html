@@ -66,6 +66,8 @@ ul.topnav li.icon {display: none;}
   
 }
 
+.navwidth{width:30%;}
+
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width:680px) {
 	ul.topnav.responsive {position: relative;}
@@ -82,6 +84,7 @@ ul.topnav li.icon {display: none;}
 		display: block;
 		text-align: left;
 	}
+	.navwidth{width:100%;}
 }
 	.parleft{width:64%;position:relative;float:left; margin-right: 64px;}
 	.parright{width:auto;height:auto;position:relative;vertical-align:middle;float:left;}
@@ -89,7 +92,7 @@ ul.topnav li.icon {display: none;}
 	@media only screen and (max-width: 1024px) {
 	.parleft{width:auto;position:relative;float:left;}
 	.parright{width:auto;height:auto;position:relative;vertical-align:middle;float:left;}
-
+	
 }
 </style>
 
@@ -100,7 +103,7 @@ ul.topnav li.icon {display: none;}
 </head>
 
 <body>
-<nav class="w3-sidenav w3-animate-left w3-white  w3-dark-grey w3-card-2" style="display:none; font-family:Microsoft JhengHei" id="mySidenav">
+<nav class="navwidth w3-sidenav w3-animate-left w3-white  w3-dark-grey w3-card-2" style="display:none; font-family:Microsoft JhengHei" id="mySidenav">
   <a href="javascript:void(0)"
   onclick="w3_close()"
   class="w3-closenav w3-large">Close &times;</a>
