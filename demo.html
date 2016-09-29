@@ -569,6 +569,8 @@ showDivs("slide-is", 0);
 showDivs("slide-hs", 0);
 showDivs("slide-ml", 0);
 
+
+
 var tagString = [];
 Array.prototype.remove = function() {
     var what, a = arguments, L = a.length, ax;
@@ -629,6 +631,8 @@ else
 	//document.getElementById("chktest").innerHTML = tagString.join(',');
 }
 
+var dispalycount = 0;
+
 	for(var i=0;i<divs.length;i++)
 	{
 		var str = divs[i].innerHTML;
@@ -640,11 +644,21 @@ else
 			if(tagString.indexOf(tags[j]) > -1)
 			{
 				divs[i].parentElement.style.display = 'block';
+				dispalycount++;
 				break;
 			}
 			
 		}
 		
+	}
+	
+	if(dispalycount===0)
+	{
+		for(var i=0;i<divs.length;i++)
+		{
+			divs[i].parentElement.style.display = 'block';
+		}
+	
 	}
 }
 
